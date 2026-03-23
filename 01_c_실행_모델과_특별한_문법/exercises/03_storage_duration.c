@@ -6,9 +6,13 @@ static int file_static_counter = 1000;
 static void tick(void) {
     static int function_static_counter = 0;
     int local_counter = 0;
+    int auto_counter = 0;
+    static int static_counter = 0;
 
     function_static_counter++;
     local_counter++;
+    auto_counter++;
+    static_counter++;
     global_counter++;
     file_static_counter++;
 
@@ -16,6 +20,8 @@ static void tick(void) {
     printf("file_static_counter     = %d\n", file_static_counter);
     printf("function_static_counter = %d\n", function_static_counter);
     printf("local_counter           = %d\n", local_counter);
+    printf("auto_counter            = %d\n", auto_counter);
+    printf("static_counter          = %d\n", static_counter);
     puts("---");
 }
 
